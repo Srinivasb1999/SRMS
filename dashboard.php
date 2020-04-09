@@ -1,11 +1,11 @@
 <?php
     include("init.php");
-    
+
     $no_of_classes=mysqli_fetch_array(mysqli_query($conn,"SELECT COUNT(*) FROM `class`"));
     $no_of_students=mysqli_fetch_array(mysqli_query($conn,"SELECT COUNT(*) FROM `students`"));
     $no_of_result=mysqli_fetch_array(mysqli_query($conn,"SELECT COUNT(*) FROM `result`"));
 ?>
-        
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +27,7 @@
     </style>
 </head>
 <body>
-        
+
     <div class="title">
         <a href="dashboard.php"><img src="./images/logo1.png" alt="" class="logo"></a>
         <span class="heading">Dashboard</span>
@@ -75,7 +75,6 @@
     </div>
 
     <div class="footer">
-        <!-- <span>Designed & Coded By Jibin Thomas</span> -->
     </div>
 </body>
 </html>
