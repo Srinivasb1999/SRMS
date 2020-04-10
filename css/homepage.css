@@ -16,7 +16,7 @@ hr {
 
 .title {
     display: flex;
-    font-size: 3em;
+    font-size: 2.75em;
     justify-content: center;
     align-items: center;
     height: 80px;
@@ -24,6 +24,7 @@ hr {
 
 .title span{
   color: #86c232;
+  margin-top: 15px;
 }
 
 .main{
