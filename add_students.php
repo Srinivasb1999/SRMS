@@ -11,7 +11,7 @@
     <title>Add Students</title>
 </head>
 <body>
-        
+
     <div class="title">
         <a href="dashboard.php"><img src="./images/logo1.png" alt="" class="logo"></a>
         <span class="heading">Dashboard</span>
@@ -59,7 +59,7 @@
                 <?php
                     include('init.php');
                     include('session.php');
-                    
+
                     $class_result=mysqli_query($conn,"SELECT `name` FROM `class`");
                         echo '<select name="class_name">';
                         echo '<option selected disabled>Select Class</option>';
@@ -101,14 +101,14 @@
             if(preg_match("/[a-z]/i",$rno))
                 echo '<p class="error">Please enter valid roll number</p>';
             if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-                    echo '<p class="error">No numbers or symbols allowed in name</p>'; 
+                    echo '<p class="error">No numbers or symbols allowed in name</p>';
                   }
             exit();
         }
-        
+
         $sql = "INSERT INTO `students` (`name`, `rno`, `class_name`) VALUES ('$name', '$rno', '$class_name')";
         $result=mysqli_query($conn,$sql);
-        
+
         if (!$result) {
             echo '<script language="javascript">';
             echo 'alert("Invalid Details")';
